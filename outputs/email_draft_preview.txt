@@ -1,0 +1,75 @@
+Subject: Weekly Product Pulse + Customer Clarification — 2026-10-19
+============================================================
+
+Hi Team,
+
+Here is our weekly product pulse update alongside a customer-facing fee explainer snippet:
+
+--- PART 1: WEEKLY PRODUCT PULSE ---
+### 1. Top 2 Critical Customer Friction Themes
+
+*   **Theme 1: Opacity Around Transaction Costs and In-App Deductions**
+    *   **Evidence:** High volume of complaints regarding unexpected charges: *"Why is there an extra brokerage fee shown on my order statement?"*, *"Hidden charges deducted on withdrawal"*, and *"Charged a hidden fee during my auto-debit SIP transaction"*.
+    *   **Impact:** Erodes user trust, drives support ticket volume, and creates friction at high-intent stages (SIP setups, equity selling, and fund withdrawals).
+
+*   **Theme 2: High Turnaround Time (TAT) on Transaction Failure Resolutions**
+    *   **Evidence:** Repeated feedback stating: *"Customer support took 3 days to respond to my transaction failure query."*
+    *   **Impact:** Failed transactions with locked capital trigger peak user anxiety; a 72-hour support SLA leads to app store downvoting, churn, and loss of investor confidence.
+
+---
+
+### 2. Identified Recurring Fee Confusion Point
+
+*   **Depository Participant (DP) Charges & Statutory Levies (Mistaken for "Extra Brokerage / Hidden Withdrawal Fee")**
+    *   Users frequently conflate flat regulatory/depository fees (such as DP charges upon selling delivery shares or bank mandate charges on auto-debit SIPs) with Groww’s platform brokerage or withdrawal penalties.
+
+---
+
+### 3. Actionable Product Recommendations
+
+#### For Theme 1 (Fee Transparency)
+1. **Pre-Execution "Estimated Charges" Drawer:**
+   * Introduce a real-time, expandable bottom sheet on the order review screen (Stocks, Mutual Funds, and Withdrawals) detailing the exact split: Brokerage, STT, Exchange Turnover Fees, GST, and applicable DP charges before the order is placed.
+2. **Contextual Order Ledger Breakdown:**
+   * In the order history and ledger statement, replace ambiguous line items with tap-to-expand explanations (e.g., convert "Brokerage & Charges" into an itemized breakdown with help tooltips).
+
+#### For Theme 2 (Customer Support on Failed Transactions)
+1. **Self-Serve Live Refund Tracker:**
+   * Build a real-time "Transaction Tracker" screen directly accessible from the order failure screen and passbook, showing Bank UTR, NPCI clearing status, and an auto-refund countdown timer (e.g., *"Refund initiated; expected in your account by 5:00 PM tomorrow"*).
+2. **Priority Bot Workflow for Money-in-Transit Queries:**
+   * Implement automated bot triage that instantly pulls bank gateway statuses to resolve failed transaction inquiries in real time, routing only unresolved edge cases to human agents with a dedicated sub-2-hour SLA.
+
+---
+
+### 4. Weekly Product Pulse Summary
+
+> **Product Health Pulse | Week ending Oct 20**  
+> **Sentiment Split:** Core UI and Mutual Fund workflows continue to receive strong positive feedback—notably dark mode navigation and simple MF discovery. However, recurring low-rating clusters reveal two operational and design bottlenecks impacting customer trust.  
+> 
+> **Key Observations:**  
+> 1. **Fee Confusion:** Users report feeling "blind-sided" by post-trade deductions on order statements, SIP auto-debits, and withdrawals. This is primarily driven by a lack of upfront visibility for statutory/DP charges, which users misattribute to hidden platform fees.  
+> 2. **Support Lag on Blocked Capital:** Inquiries regarding failed transactions face up to 3-day turnaround times, severely impacting user sentiment.  
+> 
+> **Immediate Action Items:**  
+> * Deploy an itemized "Charges & Taxes" breakdown modal on the pre-order confirmation screen.  
+> * Ship a self-serve transaction status and auto-refund tracker within the Help Center to deflect transaction failure tickets and eliminate anxiety around stuck funds.  
+> *(Word count: 147 words)*
+
+---
+
+### 5. Standardized Explanation Snippet: Depository Participant (DP) Charge
+
+* **Definition:** A Depository Participant (DP) charge is a flat regulatory fee levied per company (ISIN), per trading day, whenever equity holdings are sold from your Demat account.
+* **Beneficiaries:** This fee is collected by the depositories (CDSL/NSDL) and the depository participant; it is not an intraday platform brokerage charge.
+* **Application Rule:** The charge is independent of the number of shares sold (e.g., selling 1 share or 100 shares of the same company on the same day incurs the exact same flat fee).
+* **Billing Method:** The fee is automatically debited from your trading balance/ledger at the end of the settlement cycle, not deducted directly from your linked bank account.
+
+--- PART 2: REUSABLE SUPPORT SNIPPET (DP CHARGES) ---
+* A Depository Participant (DP) charge is a flat fee levied when selling delivery shares.
+* Charge Amount: ₹13.50 + 18% GST (Total: ₹15.93) per stock company per day.
+* Who Collects It: Jointly collected by CDSL depository and Groww.
+* Zero Buy Fees: DP charges apply ONLY on sell orders, not buy orders.
+* Last checked: 2026-10-19
+
+Best regards,
+Product & Support Operations Team
